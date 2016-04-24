@@ -9,6 +9,11 @@ Template.spinnerArea.helpers({
 		// return values[random]
 		return Spin.getSpin();
 	},
+
+	spinPicture: function() {
+		var imgName = "spinner"+spinValue+".jpg";
+		return imgName;
+	},
 });
 
 Template.spinnerArea.events({
