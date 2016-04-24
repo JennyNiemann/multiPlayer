@@ -1,4 +1,5 @@
 Spin = {
+  // var spval = getSpin()
   spinValue: -42,
 };
   // getSpin = function() {

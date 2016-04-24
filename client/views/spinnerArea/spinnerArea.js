@@ -9,9 +9,14 @@ Template.spinnerArea.helpers({
 		// return values[random]
 		return Spin.getSpin();
 	},
-
+	is1:function() {
+		console.log("in is1")
+		if (spinValue() == '1') true;
+		else false;
+	},
 	spinPicture: function() {
-		var imgName = "spinner"+spinValue+".jpg";
+		var pic = Spin.getSpin()
+		var imgName = "/spinner"+pic+".jpg";
 		return imgName;
 	},
 });
@@ -19,7 +24,7 @@ Template.spinnerArea.helpers({
 Template.spinnerArea.events({
 	'click .spin': function(event) {
 		event.preventDefault();
-		alert("Spinning!");
+		//alert("Spinning!");
 		location.reload(true)
 		// spinValue = Spin.getSpin();
 		// console.log("newSpinValue is "+spinValue);
