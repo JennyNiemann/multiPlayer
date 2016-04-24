@@ -15,7 +15,9 @@ Template.spinnerArea.events({
 	'click .spin': function(event) {
 		event.preventDefault();
 		alert("Spinning!");
-		spinValue = Spin.getSpin();
+		location.reload(true)
+		// spinValue = Spin.getSpin();
+		// console.log("newSpinValue is "+spinValue);
 		// var spin = 0;
 		// Meteor.call('getSpin', function(error, result) {
     //   		if (error)
