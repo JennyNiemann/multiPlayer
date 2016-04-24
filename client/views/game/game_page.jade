@@ -1,0 +1,34 @@
+template(name="gamePageActions")
+  h2
+    | Game created by 
+    span.small #{author}
+    
+  unless gameFull
+    unless inGame
+      a.btn.btn-success.btn-lg.join.action-button(href="#") Join game
+
+  if gameReady
+    if ownGame
+      a.btn.btn-success.btn-lg.start.action-button(href="#") Start game
+  p
+    if inGame
+      a.btn.btn-danger.leave.action-button(href="#") Leave game
+
+    if ownGame
+      a.btn.btn-danger.delete.action-button(href="#") Cancel game
+
+template(name="players")
+  h3 Players
+  each players
+    p #{name}
+  else
+    p nobody joined yet :-(
+  p #{minPlayer} needed to start the game
+
+template(name="selectedBoard")
+  h3 Board
+  .selected-board(style='clear:both;')
+    +thumbnail
+  if ownGame
+    p
+      a.btn.btn-primary.select.action-button(href="#") Change board

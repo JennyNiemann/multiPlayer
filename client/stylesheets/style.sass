@@ -1,0 +1,245 @@
+$tile-size: 50px
+$preview-tile-size: 24px
+
+.pointer
+  cursor: pointer
+  cursor: hand
+
+#login-dropdown-list
+   padding-top: 15px
+   padding-bottom: 15px
+   padding-left: 15px
+
+.footer
+  margin-top: 25px
+  min-height: 40px
+
+.users-pill
+  margin: 5px
+
+.action-button
+  margin: 5px
+
+a.white
+  color: white
+
+.well
+  background-color: #2c3e50
+  border: none
+  border-radius: 10px
+
+.countdown
+  background:  #780300
+  .well
+    background: #780300
+.finish
+  background: #aa0500
+  .well
+    background: #aa0500
+
+.chat
+  position: relative
+  margin: 0 auto
+  overflow: hidden
+  margin-bottom: 10px
+
+  .messages
+    width: 100%
+    height: 300px
+    overflow: auto
+    text-align: left
+
+    > div
+      padding: 5px
+
+    .system
+      color: #FF8000
+
+
+=board($tile, $font-size)
+  position: relative
+
+  span.tile
+    width: $tile
+    height: $tile
+    float: left
+    background-size: 100%
+
+  img.board-item
+    width: $tile
+    height: $tile
+
+  div.checkpoint
+    font-size: $tile/3.12
+    background-color: #336699
+    width: $tile/2.27
+    height: $tile/2.27
+    border-radius: $tile/4.54
+    margin-top: $tile*0.28
+    margin-left: $tile*0.28
+    position: absolute
+    top: 0px
+
+    &.visited
+      background-color: #449d44
+
+  .robot, .marker, .laser
+    position: absolute
+    width: $tile
+    height: $tile
+
+    img
+      width: $tile
+      height: $tile
+      -webkit-transform-origin: 50% 50%
+
+#board
+  +board($tile-size, 19px)
+  clear: both
+
+  .position-select
+    position: absolute
+    background-color: #336699
+    width: 50px
+    height: 50px
+    opacity: 0.7
+
+  .direction-select
+    position: absolute
+    background-color: #336699
+    width: 50px
+    height: 50px
+    opacity: 0.7
+
+  img.robot-off
+    position: absolute
+    top: $tile-size/4
+    left: $tile-size/4
+    width: 50%
+    height: 50%
+
+  .announce
+    position: absolute
+    top: 25%
+    left: 37%
+    width: 160px
+    height: 215px
+    background: rgba(44, 62, 80, 0.8)
+    text-align: center
+
+.announce-bar
+  background-color: #CCC
+  text-align: left
+  padding: 0px
+  margin: 0px
+  .phase
+    padding: 8px
+    background-color: rgb(113, 113, 113)
+    float: left
+    border-right: 1px solid #FFF
+    border-bottom: 1px solid #FFF
+  .finished
+    background-color: rgb(0, 79, 0)
+  .active
+    background-color: #67A50A
+
+
+.board-thumbnail
+  +board($preview-tile-size, 9px)
+
+.boardchoice
+  float: left
+  margin: 30px
+
+  .board-thumbnail
+    border: 2px solid #000
+  .selected
+    border: 2px solid #00f
+
+.selected-board .board-thumbnail
+  margin-left: auto
+  margin-right: auto
+
+span.players
+  float: left
+span.length
+  float: right
+
+img#robot
+  width: $tile-size
+  height: $tile-size
+
+.exit
+  margin-top: 35px
+
+.laser
+  background: #f00
+
+.robot-icon
+  width: 15px
+  height: 15px
+  display: inline
+  margin: 0px 0px 2px 0px
+
+.cardTimer
+  top: 43%
+  position: absolute
+  text-align: center
+  width: 100%
+
+h5.player-status
+  text-align: left
+
+.tooltip
+  z-index: 1001
+  pointer-events: none
+  transition: opacity .5s ease-out
+  opacity: 0
+  background-color: #000
+  color: #fff
+  padding: 5px
+  border-radius: 5px
+  max-width: 300px
+  &.hide
+    opacity: 0
+  &.show
+    opacity: 1
+
+.share
+  font-size: 14px
+  padding-top: 14px
+  .btn
+    margin: 7px
+
+.fb-like
+  float: left
+  padding-top: 15px
+
+.fb_login_button span,
+.fb_login_button iframe
+  width: 120px !important
+  height: 20px !important
+
+.highscores
+  text-align: left
+  padding-left: 60px
+  padding-right: 60px
+  h2
+    text-align: center
+
+
+@keyframes fadeInAndOut
+  0%, 50%, 100%
+    transition-timing-function: cubic-bezier(0, 1, 1, 0)
+
+  0%
+    opacity: 0
+  50%
+    opacity: 1
+    transform: scale(50, 50)
+  100%
+    opacity: 0
+    transform: scale(100, 100)
+
+.fadeInAndOut
+  animation: fadeInAndOut 1.75s both

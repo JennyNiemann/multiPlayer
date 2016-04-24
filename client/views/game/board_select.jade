@@ -1,0 +1,21 @@
+template(name="boardselect")
+  .well
+    h3 Select board
+    hr.star-well
+    ul.nav.nav-pills
+      li.active(role='presentation')
+        a(href='#beginner' role='pill' data-toggle='pill')
+          | Beginner courses
+      li(role='presentation')
+        a(href='#expert' role='pill' data-toggle='pill')
+          | Expert courses
+    .tab-content
+      .tab-pane.active(role='tabpanel' id='beginner')
+        each beginnerBoards
+          .boardchoice
+            +thumbnail
+      .tab-pane(role='tabpanel' id='expert')
+        each expertBoards
+          .boardchoice
+            +thumbnail
+    div(style="clear:both;")

@@ -1,0 +1,8 @@
+div.gameArea {
+	background: red;
+	font-family: "Courier New", Times, serif;
+	font-style: italic;
+	font-weight: bolder;
+	color: green;
+	border: 10px ridge yellow;
+}
