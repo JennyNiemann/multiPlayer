@@ -1,4 +1,4 @@
-Spinner = {
+Spin = {
   spinValue: -42,
 };
   // getSpin = function() {
@@ -8,6 +8,8 @@ Spinner = {
 
 (function (scope) {
   scope.getSpin = function() {
-    return "Bird";
+    var values = ["1","2","3","4","Bird","Spill"];
+		var random = Math.floor(Math.random() * 5);
+		return values[random];
   };
-})(Spinner);
+})(Spin);
