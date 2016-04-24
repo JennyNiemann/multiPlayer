@@ -1,6 +1,6 @@
 Spin = {
   // var spval = getSpin()
-  spinValue: -42,
+  spinValue: 'Bird',
 };
   // getSpin = function() {
   // 	return "Bird";
@@ -13,4 +13,5 @@ Spin = {
 		var random = Math.floor(Math.random() * 5);
 		return values[random];
   };
+  scope.spinVal = Spin.getSpin();
 })(Spin);
