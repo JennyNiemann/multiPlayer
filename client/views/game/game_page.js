@@ -60,15 +60,15 @@ Template.players.helpers({
   }
 });
 
-Template.selectedBoard.helpers({
-  ownGame: function() {
-    return this.game.userId == Meteor.userId();
-  }
-});
-
-Template.selectedBoard.events({
- 'click .select': function(e) {
-    e.preventDefault();
-    Router.go('boardselect.page', {_id: this.game._id});
-  }
-});
+// Template.selectedBoard.helpers({
+//   ownGame: function() {
+//     return this.game.userId == Meteor.userId();
+//   }
+// });
+//
+// Template.selectedBoard.events({
+//  'click .select': function(e) {
+//     e.preventDefault();
+//     Router.go('boardselect.page', {_id: this.game._id});
+//   }
+// });
