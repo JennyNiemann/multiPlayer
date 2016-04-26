@@ -1,8 +1,35 @@
 div.gameArea {
 	background: red;
 	font-family: "Courier New", Times, serif;
-	font-style: italic;
+	/*font-style: italic;*/
 	font-weight: bolder;
+	text-transform: uppercase;
 	color: green;
 	border: 10px ridge yellow;
+}
+
+div.tree1 { /*blue*/
+	float: left;
+	padding-left: 30px;
+	padding-bottom: 30px;
+	/*color: #4d79ff;*/
+}
+
+div.tree2 { /*yellow*/
+	float: right;
+	padding-right: 30px;
+	padding-bottom:30px;
+	/*color: #ffff00;*/
+}
+
+div.tree3 { /*green*/
+	float: left;
+	padding-left: 30px;
+	/*color: #00cc00;*/
+}
+
+div.tree4 { /*pink*/
+	float: right;
+	padding-right: 30px;
+	/*color: #ff33cc;*/
 }

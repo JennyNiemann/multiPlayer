@@ -3,7 +3,7 @@ Router.configure({
 });
 
 Meteor.startup(function() {
-  document.title = "RoboRally online!";
+  document.title = "Hi-Ho-Cherry-O online!";
 
   if (Meteor.settings && Meteor.settings.public.mixpanelEnabled) {
     mixpanel.init('2ea215e4a5be057fa7ec3dd2a0e2100a');
@@ -145,19 +145,19 @@ Router.route('/games/:_id', {
         return {players: Players.find(), game: game};
       }
     });
-    this.render('selectedBoard', {
-      to: 'rightPanel3',
-      data: function() {
-        var game = Games.findOne(this.params._id);
-        var board = game.board();
-        return { width: board.width*24,
-                 height: board.height*24,
-                 extra_class: '',
-                 game: game,
-                 board: board
-               };
-      }
-    });
+    // this.render('selectedBoard', {
+    //   to: 'rightPanel3',
+    //   data: function() {
+    //     var game = Games.findOne(this.params._id);
+    //     var board = game.board();
+    //     return { width: board.width*24,
+    //              height: board.height*24,
+    //              extra_class: '',
+    //              game: game,
+    //              board: board
+    //            };
+    //   }
+    // });
   }
 });
 
