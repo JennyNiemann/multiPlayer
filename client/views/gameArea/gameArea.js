@@ -1,6 +1,6 @@
 Template.gameArea.helpers({
 	blueTreePicture: function() {
-		var pic = TreeLogicBlue.TREENUM;
+		var pic = TreeLogicBlue.newTreeVal;
 		var imgName = "/treebucket"+pic+".jpg";
 		return imgName;
 	},
@@ -9,7 +9,8 @@ Template.gameArea.helpers({
 		return TreeLogicBlue.BUCKETNUM;
 	},
 	blueTreeNum: function() {
-		return TreeLogicBlue.TREENUM;
+		return TreeLogicBlue.newTreeVal;
+		//return TreeLogicBlue.TREENUM;
 	},
 
 	// blueInterpretSpinner: function() {
