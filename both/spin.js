@@ -14,7 +14,7 @@ var playerList = new Array("Yellow", "Blue", "Green", "Yellow");
 		var random = Math.floor(Math.random() * 5);
 		return values[random];
   };
-<<<<<<< HEAD
+
   scope.playerOrder = function() {
     var currentPlayer = playerList.shift();
     playerList = playerList.push(currentPlayer);
@@ -26,8 +26,7 @@ var playerList = new Array("Yellow", "Blue", "Green", "Yellow");
   //otherwise, it keeps generating random numbers
   //each time you call it, instead of saving the
   //one random number for each spin
-=======
+
   scope.spinVal = Spin.getSpin();
   scope.currentPlayer = "Blue"
->>>>>>> 46f8af09f3d5d7222a4ccda4a9704257325484c2
 })(Spin);
