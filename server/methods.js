@@ -3,6 +3,7 @@ Meteor.methods({
     return 1;
   },
 
+  // var playerList = new Array("Yellow", "Blue", "Green", "Pink");
   createGame: function(postAttributes) {
     var user = Meteor.user();
 

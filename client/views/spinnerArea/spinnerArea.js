@@ -14,7 +14,7 @@ Template.spinnerArea.helpers({
 		return imgName;
 	},
 	currentPlayer: function() {
-		return Spin.currPlayer;
+		return Spin.currPlayer
 	}
 });
 

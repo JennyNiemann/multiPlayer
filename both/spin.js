@@ -15,7 +15,7 @@ var playerList = new Array("Yellow", "Blue", "Green", "Yellow");
 		return values[random];
   };
   scope.playerOrder = function() {
-    var currentPlayer = playerList.pop();
+    var currentPlayer = playerList.shift();
     playerList = playerList.push(currentPlayer);
     return currentPlayer;
   };
