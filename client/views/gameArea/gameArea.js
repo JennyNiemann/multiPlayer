@@ -40,6 +40,7 @@ Template.gameArea.events({
 	},
 	'click .placeCherry': function(event) {
 		event.preventDefault();
+		var treePicked = prompt("Choose enemy player to add cherries to", "");
 		alert("Placing Cherries!");
 		location.reload(true);
 	},
