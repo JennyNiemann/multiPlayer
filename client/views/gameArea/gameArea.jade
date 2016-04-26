@@ -2,6 +2,8 @@ template(name="gameArea")
 	div.gameArea
 		h3 Hi Ho Cherry-O! Game Area
 		
+		h4 Current Player: {{currentPlayer}}
+		
 		div.tree1
 			img(style='border:5px solid #4d79ff' src='{{blueTreePicture}}')
 			h4 Blue Player
@@ -9,24 +11,24 @@ template(name="gameArea")
 			p Tree: {{blueTreeNum}}
 		
 		div.tree2
-			img(style='border:5px solid #ffff00' src='{{blueTreePicture}}')
+			img(style='border:5px solid #ffff00' src='{{YellowTreePicture}}')
 			h4 Yellow Player
-			p Bucket: {{blueBucketNum}}
-			p Tree: {{blueTreeNum}}
+			p Bucket: {{YellowBucketNum}}
+			p Tree: {{YellowTreeNum}}
 		
 		div.tree3
-			img(style='border:5px solid #00cc00' src='{{blueTreePicture}}')
+			img(style='border:5px solid #00cc00' src='{{GreenTreePicture}}')
 			h4 Green Player
-			p Bucket: {{blueBucketNum}}
-			p Tree: {{blueTreeNum}}
+			p Bucket: {{GreenBucketNum}}
+			p Tree: {{GreenTreeNum}}
 		
 		div.tree4
-			img(style='border:5px solid #ff33cc' src='{{blueTreePicture}}')
+			img(style='border:5px solid #ff33cc' src='{{PinkTreePicture}}')
 			h4 Pink Player
-			p Bucket: {{blueBucketNum}}
-			p Tree: {{blueTreeNum}}
+			p Bucket: {{PinkBucketNum}}
+			p Tree: {{PinkTreeNum}}
 			
-		a.btn.btn-success.btn-lg.takeMove.action-button(href ="#") Take Your Move
+		//a.btn.btn-success.btn-lg.takeMove.action-button(href ="#") Take Your Move
 
 		a.btn.btn-success.btn-lg.pickCherry.action-button(href ="#") Pick Cherries
 
