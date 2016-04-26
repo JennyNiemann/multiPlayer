@@ -3,7 +3,7 @@ Router.configure({
 });
 
 Meteor.startup(function() {
-  document.title = "RoboRally online!";
+  document.title = "Hi-Ho-Cherry-O online!";
 
   if (Meteor.settings && Meteor.settings.public.mixpanelEnabled) {
     mixpanel.init('2ea215e4a5be057fa7ec3dd2a0e2100a');
