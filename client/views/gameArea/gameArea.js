@@ -11,6 +11,7 @@ Template.gameArea.helpers({
 	blueTreeNum: function() {
 		return TreeLogicBlue.TREENUM;
 	},
+
 	// blueInterpretSpinner: function() {
 	// 	console.log("in spinner interpreter")
 	// 	var spin = Spin.spinVal

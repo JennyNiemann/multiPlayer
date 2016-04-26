@@ -3,37 +3,41 @@ TreeLogicBlue = {
   BUCKETNUM: 0,
 };
 
+//var treeVar = -42;
+// didn't work
 
 (function (scope) {
-  scope.spill = function() {
-    if(treeNum >= 2){
-      treeNum -= 2;
-      bucketNum += 2;
-    } else {
-      bucketNum += treeNum;
-      treeNum = 0;
-    }
-  };
-  scope.bird = function() {
-    if(treeNum >= 1){
-      treeNum -= 1;
-      bucketNum += 1;
-    } else {
-      treeNum = 0;
-    }
-  };
-  scope.getBlueBucketNum = TreeLogicBlue.bucketNum
-  // scope.interpretSpinner = function() {
-  //   console.log("in spinner interpreter")
-  // 	var spin = Spin.spinVal
+  // scope.treeval = 10;
+  // scope.bucketval = 0;
+  // scope.spill = function() {
+  //   if(TreeLogicBlue.treeval >= 2){
+  //     TreeLogicBlue.treeval -= 2;
+  //     TreeLogicBlue.bucketval += 2;
+  //   } else {
+  //     TreeLogicBlue.bucketval += TreeLogicBlue.treeval;
+  //     TreeLogicBlue.treeval = 0;
+  //   }
+  // };
+  // scope.bird = function() {
+  //   if(TreeLogicBlue.treeval >= 1){
+  //     TreeLogicBlue.treeval -= 1;
+  //     TreeLogicBlue.bucketval += 1;
+  //   } else {
+  //     TreeLogicBlue.treeval = 0;
+  //   }
+  // };
+  // scope.interpretSpinnerTree = function() {
+  //   console.log("in spinner interpreter for trees")
+  // 	var spin = Spin.spinVal;
   // 	if (spin == 'spill') {
-  // 		spill();
+  // 		TreeLogicBlue.spill();
   // 	}
   // 	if (spin == 'bird') {
-  // 		bird();
+  // 		TreeLogicBlue.bird();
   // 	}
   //   return treeNum;
   // };
+  // scope.newTreeVal = TreeLogicBlue.interpretSpinnerTree();
   // scope.getTreeNum = scope.interpretSpinner()
   //scope.spinVal = Spin.getSpin(); //this is the key
   //otherwise, it keeps generating random numbers
