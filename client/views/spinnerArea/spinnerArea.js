@@ -1,6 +1,8 @@
 ///Session.set('spinValue', 19);
 //import Math;
 
+//var playerList = new Array("Yellow", "Blue", "Green", "Pink");
+
 Template.spinnerArea.helpers({
 	spinValue: function() {
 		//return Spin.getSpin();
@@ -11,6 +13,9 @@ Template.spinnerArea.helpers({
 		var imgName = "/spinner"+pic+".jpg";
 		return imgName;
 	},
+	currentPlayer: function() {
+		return Spin.currPlayer;
+	}
 });
 
 Template.spinnerArea.events({

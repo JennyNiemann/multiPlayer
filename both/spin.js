@@ -6,6 +6,7 @@ Spin = {
   // 	return "Bird";
 //};
 
+var playerList = new Array("Yellow", "Blue", "Green", "Yellow");
 
 (function (scope) {
   scope.getSpin = function() {
@@ -13,6 +14,13 @@ Spin = {
 		var random = Math.floor(Math.random() * 5);
 		return values[random];
   };
+  scope.playerOrder = function() {
+    var currentPlayer = playerList.pop();
+    playerList = playerList.push(currentPlayer);
+    return currentPlayer;
+  };
+
+  scope.currPlayer = Spin.playerOrder();
   scope.spinVal = Spin.getSpin(); //this is the key
   //otherwise, it keeps generating random numbers
   //each time you call it, instead of saving the
