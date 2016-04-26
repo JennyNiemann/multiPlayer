@@ -11,9 +11,10 @@ TreeLogicBlue = {
   scope.bucketvalue = 0;
 
   scope.updateTree = function() {
-    TreeLogicBlue.treevalue += 1
-    return TreeLogicBlue.treevalue;
+    TreeLogicBlue.treevalue += 1;
   };
+
+  scope.updateVal = TreeLogicBlue.treevalue;
 
   scope.spillTree = function() {
     if(TreeLogicBlue.treevalue <= 8){
